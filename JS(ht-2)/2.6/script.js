@@ -6,14 +6,14 @@ document.querySelector("#searchButton").addEventListener("click", function () {
         return
     }
     document.querySelector(".main").innerHTML = "";
-    fetch(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyCMPF7BZR4q3ioZLESnV4wWG_ArE3mh_ZY&type=video&part=snippet&maxResults=15&q=${document.querySelector("#search").value}`)
+    fetch(`https://www.googleapis.com/youtube/v3/search?key=API&type=video&part=snippet&maxResults=15&q=${document.querySelector("#search").value}`)
         .then(searchResults => searchResults.json())
         .then(searchResults => {
             let ids = []
             for (let video of searchResults.items) {
                 ids.push(video.id.videoId);
             }
-            fetch(`https://www.googleapis.com/youtube/v3/videos?key=AIzaSyCMPF7BZR4q3ioZLESnV4wWG_ArE3mh_ZY&id=${ids.join(',')}&part=snippet,statistics`)
+            fetch(`https://www.googleapis.com/youtube/v3/videos?key=API&id=${ids.join(',')}&part=snippet,statistics`)
                 .then(videoDetails => videoDetails.json())
                 .then(videoDetails => {
                     for (let i in searchResults.items)
