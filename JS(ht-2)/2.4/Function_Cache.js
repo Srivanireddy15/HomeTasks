@@ -1,7 +1,14 @@
-const cache = func => {
-    const mem = {};
-    return (...a) => {
-        let args = JSON.stringify(...a);
-        return mem.hasOwnProperty(args) ? mem[args] : mem[args] = func(...a);
+function cache(func) {
+    // do your magic here
+    
+    var obj={};
+    return function(...a)
+    {
+      var args=JSON.stringify(...a);
+      if(obj.hasOwnProperty(args))
+        return obj[args];
+      else
+        return obj[args]=func(...a);
     }
-};
+    
+  }

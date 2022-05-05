@@ -1,4 +1,3 @@
-//Get the Middle Character
 function getMiddle(s)
 {
   var position;

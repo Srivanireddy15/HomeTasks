@@ -1,6 +1,14 @@
-// Let the currying begin!
-  var add = function(n) {
-  const f = x => add(n + x)
-  f.valueOf = () => n
-  return f;
+function add(n){
+  console.log(n);
+  const sum=function(b)
+  {
+    console.log(b);
+    console.log(n+b);
+    return add(n+b);
+  }
+  sum.valueOf=function()
+  {
+    return n;
+  }
+  return sum;
 }

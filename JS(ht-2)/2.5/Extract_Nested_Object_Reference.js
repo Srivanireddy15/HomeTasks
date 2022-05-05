@@ -7,4 +7,3 @@ Object.prototype.hash = function (string) {
         return undefined
     }
 }
-

@@ -1,4 +1,3 @@
-//Closures and Scopes
 function createFunctions(n) {
   var callbacks = [];
 

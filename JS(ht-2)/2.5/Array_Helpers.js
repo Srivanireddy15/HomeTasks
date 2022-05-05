@@ -11,4 +11,3 @@ console.log(numbers.sum(), 15,);
 console.log(numbers.average(), 3);
 console.log(numbers.even(), [2, 4]);
 console.log(numbers.odd(), [1, 3, 5]);
-

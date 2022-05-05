@@ -1,11 +1,11 @@
-//Can you keep a secret?
 function createSecretHolder(secret) {
-  return {
+  var obj={
  getSecret : function() {
     return secret;
 },
-  setSecret : function(a) {
-    secret = a;
+  setSecret : function(n) {
+    secret = n;
   }
 }
+  return obj;
 }

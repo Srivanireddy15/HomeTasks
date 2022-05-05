@@ -1,8 +1,7 @@
 function isSantaClausable(obj) {
-    return ['sayHoHoHo', 'distributeGifts', 'goDownTheChimney'].every(function (methodName) {
-        return typeof obj[methodName] == 'function';
-    });
-}
+    // TODO
+    return ((typeof(obj.sayHoHoHo)=="function") && (typeof(obj.distributeGifts)=="function") && (typeof(obj.goDownTheChimney)=="function"));
+  }
 
 
 var santa = {

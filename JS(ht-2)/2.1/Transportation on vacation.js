@@ -1,6 +1,4 @@
-//Transportation on vacation
 function rentalCarCost(d) {
-  // Your solution here
   if(d>=7)
     {
     return (d*40)-50;

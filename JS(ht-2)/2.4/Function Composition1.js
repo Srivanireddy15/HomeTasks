@@ -2,24 +2,17 @@ const compose = (...functions) => args => functions.reduceRight((arg, fn) => fn(
 
 
 
-function compose() { //(multTwo,addOne),(5)
-
- 
-
-    let args = Array.from(arguments).reverse() //addOne,mulTwo
-
-    return function (x) { //5
-
-        for (f of args) {
-
-            console.log(f+" "+x)
-
-            x = f(x) // args[f](x)
-
+function compose() {
+    // Your solution
+    
+    let args=Array.from(arguments).reverse();
+    return function(x)
+    {
+      for(let i=0;i<args.length;i++)
+        {
+          x=args[i](x);
         }
-
-        return x
-
+      return x;
     }
-
-}
+    
+  }
