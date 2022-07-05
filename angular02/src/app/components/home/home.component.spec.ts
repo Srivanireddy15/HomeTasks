@@ -8,9 +8,9 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [HomeComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -22,4 +22,10 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  //Contain text "Users Management"
+  it('should contain text "Users Management"', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('.title').textContent).toContain('Users Management');
+  })
 });

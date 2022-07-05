@@ -3,24 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
-import { UsersListComponent } from './components/users-list/users-list.component';
-import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { HomeComponent } from './components/home/home.component';
-import { ActiveListComponent } from './modules/active/components/active-list/active-list.component';
+import { ActiveModule } from './modules/active/active.module';
+import { ComponentsModule } from './components/components.module';
+import { DeletedModule } from './modules/deleted/deleted.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    UsersListComponent,
-    UserDetailsComponent,
-    HomeComponent,
-    ActiveListComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ActiveModule,
+    DeletedModule,
+    ComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

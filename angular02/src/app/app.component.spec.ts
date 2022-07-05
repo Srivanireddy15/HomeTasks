@@ -20,16 +20,12 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular02'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular02');
-  });
-
-  it('should render title', () => {
+  //Should have navbar tag
+  it('should have a .navbar tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular02 app is running!');
-  });
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('.navbar')).toBeTruthy();
+  })
+
 });

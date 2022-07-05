@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ActiveListComponent } from './active-list.component';
+import { DeletedComponent } from './deleted.component';
 
-describe('ActiveListComponent', () => {
-  let component: ActiveListComponent;
-  let fixture: ComponentFixture<ActiveListComponent>;
+describe('DeletedComponent', () => {
+  let component: DeletedComponent;
+  let fixture: ComponentFixture<DeletedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ActiveListComponent ]
+      declarations: [ DeletedComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ActiveListComponent);
+    fixture = TestBed.createComponent(DeletedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

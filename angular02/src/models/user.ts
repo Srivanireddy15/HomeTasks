@@ -1,4 +1,4 @@
-interface User {
+export interface User {
     id: string;
     firstName: string;
     lastName: string;
@@ -6,5 +6,4 @@ interface User {
     login: string;
     password: string;
     isDeleted: boolean;
-  }
-  
+}

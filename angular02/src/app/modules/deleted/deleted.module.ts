@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DeletedListComponent } from './components/deleted-list/deleted-list.component';
+import { DeletedComponent } from './deleted.component';
+import { ComponentsModule } from 'src/app/components/components.module';
+import { UsersService } from 'src/app/services/users.service';
 
 
 
 @NgModule({
+  providers: [],
   declarations: [
-    DeletedListComponent
+    DeletedComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentsModule
   ]
 })
 export class DeletedModule { }

@@ -1,12 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ActiveComponent } from './active.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { ComponentsModule } from 'src/app/components/components.module';
+import { UsersService } from 'src/app/services/users.service';
 
 
 
 @NgModule({
-  declarations: [],
+  providers: [],
+  declarations: [
+    ActiveComponent
+  ],
   imports: [
-    CommonModule
+    BrowserModule,
+    CommonModule,
+    ComponentsModule
   ]
 })
-export class ActiveModule { }
+export class ActiveModule {
+  constructor() {
+    console.log("ActiveModule constructor");
+  }
+}

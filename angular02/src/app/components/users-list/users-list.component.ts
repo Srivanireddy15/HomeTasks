@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { User } from 'src/models/user';
 
 @Component({
   selector: 'app-users-list',
@@ -12,4 +13,15 @@ export class UsersListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  @Input('btnText')
+  btnText!: string;
+
+  @Input('usersList')
+  usersList: User[] = []
+
+  @Output('showUser') showUser = new EventEmitter<any>();
+
+  sendId(id: string) {
+    this.showUser.emit(id);
+  }
 }

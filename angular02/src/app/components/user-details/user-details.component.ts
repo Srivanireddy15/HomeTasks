@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { User } from 'src/models/user';
 
 @Component({
   selector: 'app-user-details',
@@ -12,4 +13,10 @@ export class UserDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  @Input('user')
+  user!: User;
+
+  getFontColor() {
+    return this.user.isDeleted ? "green" : "red";
+  }
 }
